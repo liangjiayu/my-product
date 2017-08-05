@@ -1,0 +1,15 @@
+@charset "UTF-8";
+// 设计稿分配率
+$baseDevice:640px;
+// 对应设计稿的根字体大小
+$baseFont: $baseDevice/10;
+//$px 在640的设计稿的px 转为对应rem 通过js计算html字体做响应 
+@function px2rem($px) {
+  @return ($px / $baseFont) *1rem;
+}
+
+.item {
+  width: px2rem(64px);
+  height: px2rem(64px);
+  background-color: #000;
+}
