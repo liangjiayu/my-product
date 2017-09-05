@@ -1,0 +1,86 @@
+// 将设置放入此文件中以覆盖默认设置
+{
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "window.zoomLevel": 1,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "One Dark Pro",
+    // "editor.fontFamily": "Consolas,Source Code Pro,Menlo",
+    "editor.fontSize": 14,
+    "editor.lineHeight": 21,
+    "editor.tabSize": 4,
+    "editor.minimap.enabled": true,
+    "editor.renderIndentGuides": true,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true
+    },
+    "editor.parameterHints": true,
+    "css.validate": false,
+    // "jshint.options": {
+    //     "esversion": 6
+    // },
+    "editor.snippetSuggestions": "top",
+    "typescript.useCodeSnippetsOnMethodSuggest": true,
+    "sync.gist": "211d8c5147f3331d72fe9330395ae5bd",
+    "sync.lastUpload": "2017-05-27T04:51:27.164Z",
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.lastDownload": "",
+    "sync.forceDownload": false,
+    "sync.anonymousGist": false,
+    "sync.host": "",
+    "sync.pathPrefix": "",
+    "sync.quietSync": false,
+    "emmet.syntaxProfiles": {
+        "vue-html": "html",
+        "vue": "html"
+    },
+    "files.associations": {
+        "*.vue": "vue"
+    },
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "html",
+        "vue"
+    ],
+    "eslint.options": {
+        "plugins": [
+            "html"
+        ]
+    },
+    "workbench.welcome.enabled": false,
+    "vsicons.dontShowNewVersionMessage": true,
+    "atomKeymap.promptV3Features": true,
+    "update.channel": "none",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/node_modules/*/**": true
+    },
+    "beautify.language": {
+        "js": {
+            "type": [
+                "javascript",
+                "json"
+            ],
+            "filename": [
+                ".jshintrc",
+                ".jsbeautify"
+            ]
+        },
+        "css": [
+            "css",
+            "scss"
+        ],
+        "html": [
+            "htm",
+            "html",
+            "vue"
+        ]
+    }
+}
