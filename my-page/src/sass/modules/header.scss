@@ -1,0 +1,212 @@
+.site-header {
+    position: relative;
+    height: 100px;
+    .header-logo {
+        float: left;
+        .logo {
+            display: block;
+        }
+        .holdplace {
+            display: block;
+            width: 200px;
+            height: 100px;
+            background-color: yellowgreen;
+        }
+    }
+    .header-nav {
+        float: left;
+    }
+    .nav-list {
+        float: left;
+        font-size: 16px;
+    }
+    .nav-item {
+        position: relative;
+        float: left;
+        .link {
+            display: block;
+            padding: 26px 10px 36px;
+            color: #333;
+        }
+    }
+    .sub-list {
+        width: 100%;
+        position: absolute;
+        background-color: #fff;
+        li {
+            border-bottom: 1px solid #ccc;
+            text-align: center;
+        }
+        a {
+            display: block;
+            height: 40px;
+            line-height: 40px;
+        }
+    }
+    .header-search {
+        position: absolute;
+        width: 200px;
+        height: 30px;
+        top: 50%;
+        right: 10px;
+        transform: translate(0, -50%);
+        .search-text {
+            position: absolute;
+            width: 200px;
+            top: 0;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 30px 0 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+        }
+        .search-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 30px;
+            height: 30px;
+            border: 0;
+            background-color: transparent;
+            line-height: 30px;
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+}
+
+.mo-site-hearder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+    background-color: #333;
+    .header-logo {
+        display: block;
+        width: 100px;
+        height: 48px;
+        padding: 10px;
+        background-color: greenyellow;
+    }
+    .header-btn {
+        position: relative;
+        width: 48px;
+        height: 48px;
+        background-color: #666;
+        .btn-line {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -1px;
+            margin-left: -11px;
+            width: 22px;
+            height: 2px;
+            border-radius: 1px;
+            background-color: #fff;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -8px;
+                margin-left: -11px;
+                width: 22px;
+                height: 2px;
+                border-radius: 1px;
+                background-color: #fff;
+                transition: all .3s;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: 6px;
+                margin-left: -11px;
+                width: 22px;
+                height: 2px;
+                border-radius: 1px;
+                background-color: #fff;
+                transition: all .3s;
+            }
+        }
+        &.active {
+            .btn-line {
+                background-color: transparent;
+                &:before {
+                    margin-top: -1px;
+                    transform: rotate(45deg);
+                }
+                &:after {
+                    margin-top: -1px;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+
+.iphone-nav {
+    z-index: 501;
+    position: fixed;
+    top: px2rem(95px);
+    bottom: 0;
+    left: 0;
+    width: 61%;
+    background-color: #fff;
+    transition: all .5s;
+    transform: translate3d(-100%, 0, 0);
+    &.active {
+        transform: translate3d(0, 0, 0);
+    }
+    .one-list {
+        padding: 10px;
+        .li {
+            position: relative;
+        }
+    }
+    .one-item {
+        display: flex;
+        height: px2rem(95px);
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+        a {
+            font-size: px2rem(32px);
+        }
+        i {
+            flex: 1;
+            text-align: right;
+        }
+    }
+    .two-list {
+        display: none;
+        li {
+            position: relative;
+        }
+    }
+    .two-item {
+        border-bottom: 1px solid #ccc;
+        a {
+            line-height: px2rem(98px);
+            font-size: px2rem(32px);
+        }
+    }
+}
+
+.mo-iphone-mark {
+    display: none;
+    z-index: 500;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+@media(max-width:1000px) {
+    .site-header {
+        display: none;
+    }
+}

@@ -1,0 +1,30 @@
+.site-footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.fasklink-con {
+    float: left;
+    dl {
+        float: left;
+        width: 150px;
+        text-align: center;
+    }
+    dt {
+        margin-bottom: 20px;
+        a {
+            font-size: 16px;
+            color: #000;
+        }
+    }
+    dd {
+        margin-bottom: 15px;
+        a {
+            font-size: 14px;
+            color: #ccc;
+        }
+    }
+}
+.footer-contack {
+    float: right;
+}

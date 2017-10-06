@@ -1,154 +1,156 @@
 @charset "UTF-8";
 // 容器
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
+// 浮动
 .clearfix {
-  &::after,
-  &::before {
-    display: table;
-    content: "";
-  }
-  &::after {
-    clear: both;
-  }
+    &::after,
+    &::before {
+        display: table;
+        content: "";
+    }
+    &::after {
+        clear: both;
+    }
 }
 
+// 房间拉伸积分来看
 .container {
-  margin-right: auto;
-  margin-left: auto;
-  &::after,
-  &::before {
-    display: table;
-    content: "";
-  }
-  &::after {
-    clear: both;
-  }
+    margin-right: auto;
+    margin-left: auto;
+    &::after,
+    &::before {
+        display: table;
+        content: "";
+    }
+    &::after {
+        clear: both;
+    }
 }
 
 // 百分比
 .container-fluid {
-  margin-right: auto;
-  margin-left: auto;
-  &::after,
-  &::before {
-    display: table;
-    content: "";
-  }
-  &::after {
-    clear: both;
-  }
+    margin-right: auto;
+    margin-left: auto;
+    &::after,
+    &::before {
+        display: table;
+        content: "";
+    }
+    &::after {
+        clear: both;
+    }
 }
 
 // row
 .g-row {
-  &::after,
-  &::before {
-    display: table;
-    content: "";
-  }
-  &::after {
-    clear: both;
-  }
+    &::after,
+    &::before {
+        display: table;
+        content: "";
+    }
+    &::after {
+        clear: both;
+    }
 }
 
 @media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
+    .container {
+        width: 750px;
+    }
 }
 
 @media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
+    .container {
+        width: 970px;
+    }
 }
 
 @media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
+    .container {
+        width: 1170px;
+    }
 }
 
 // 一个格子的宽度
 $one: (100%/24);
 // 响应750以下 手机
 @media (max-width:767px) {
-  @for $i from 1 to 25 {
-    .g-col-xs-#{$i} {
-      float: left;
-      width: $one*$i;
+    @for $i from 1 to 25 {
+        .g-col-xs-#{$i} {
+            float: left;
+            width: $one*$i;
+        }
     }
-  }
 }
 
 // 响应768以上 平板
 @media (min-width:768px) {
-  @for $i from 1 to 25 {
-    .g-col-sm-#{$i} {
-      float: left;
-      width: $one*$i;
+    @for $i from 1 to 25 {
+        .g-col-sm-#{$i} {
+            float: left;
+            width: $one*$i;
+        }
     }
-  }
 }
 
 // 响应992以上 电脑小屏
 @media (min-width:992px) {
-  @for $i from 1 to 25 {
-    .g-col-md-#{$i} {
-      float: left;
-      width: $one*$i;
+    @for $i from 1 to 25 {
+        .g-col-md-#{$i} {
+            float: left;
+            width: $one*$i;
+        }
     }
-  }
 }
 
 // 电脑宽屏
 @media (min-width:1200px) {
-  @for $i from 1 to 25 {
-    .g-col-lg-#{$i} {
-      float: left;
-      width: $one*$i;
+    @for $i from 1 to 25 {
+        .g-col-lg-#{$i} {
+            float: left;
+            width: $one*$i;
+        }
     }
-  }
 }
 
 // 手机
 @media (max-width:767px) {
-  .g-xs-hidden {
-    display: none !important;
-  }
-  .g-xs-show {
-    display: block !important;
-  }
+    .g-xs-hidden {
+        display: none !important;
+    }
+    .g-xs-show {
+        display: block !important;
+    }
 }
 
 // 平板
 @media (min-width: 768px) and (max-width: 991px) {
-  .g-sm-hidden {
-    display: none !important;
-  }
-  .g-sm-show {
-    display: block !important;
-  }
+    .g-sm-hidden {
+        display: none !important;
+    }
+    .g-sm-show {
+        display: block !important;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  .g-md-hidden {
-    display: none !important;
-  }
-  .g-md-show {
-    display: block !important;
-  }
+    .g-md-hidden {
+        display: none !important;
+    }
+    .g-md-show {
+        display: block !important;
+    }
 }
 
 // 宽屏
 @media (min-width: 1200px) {
-  .g-lg-hidden {
-    display: none !important;
-  }
-  .g-lg-show {
-    display: block !important;
-  }
+    .g-lg-hidden {
+        display: none !important;
+    }
+    .g-lg-show {
+        display: block !important;
+    }
 }

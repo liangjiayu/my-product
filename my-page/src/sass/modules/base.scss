@@ -1,0 +1,319 @@
+@charset 'utf-8';
+
+/* CSS Document */
+
+//SCSS全局变量
+// 默认移动端设计稿宽度
+$baseDevice: 640;
+// 前端切图移动端默认正常显示尺寸320
+$device: 320;
+// 默认html font-size
+$baseFontSize: 100px;
+// scss function
+@function calc-percent($target, $context) {
+    @return $target/$context * 100%;
+}
+
+@function px2rem($px, $base-font-size: $baseDevice / $device * $baseFontSize) {
+    @if (unitless($px)) {
+        @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels for you";
+        @return px2rem($px + 0px); // That may fail.
+    }
+    @else if (unit($px)==rem) {
+        @return $px;
+    }
+    @return ($px / $base-font-size) * 1rem;
+}
+
+@mixin articleReset($fontsize: 14px) {
+    font-size: $fontsize;
+    p {
+        margin-bottom: $fontsize;
+    }
+    img {
+        max-width: 100%;
+        height: auto !important;
+    }
+    ul {
+        list-style: disc;
+        li {
+            list-style: disc;
+        }
+    }
+    ol {
+        list-style: decimal;
+        li {
+            list-style: decimal;
+        }
+    }
+}
+
+
+/* reset.css V1.6  Start*/
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+form,
+button,
+input,
+textarea,
+th,
+td {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+button,
+input,
+select,
+textarea,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i {
+    font: normal 12px "Helvetica Neue", "Microsoft YaHei", Helvetica, STHeiTi, sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: top;
+    border: 0;
+}
+
+button,
+input,
+textarea {
+    font-size: 100%;
+    vertical-align: baseline;
+    outline: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+div,
+a {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+html {
+    font-size: $baseFontSize;
+}
+
+@media screen and (min-width: 360px) {
+    html {
+        font-size: (360/320)*$baseFontSize;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    html {
+        font-size: (375/320)*$baseFontSize;
+    }
+}
+
+@media screen and (min-width: 414px) {
+    html {
+        font-size: (414/320)*$baseFontSize;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    html {
+        font-size: (480/320)*$baseFontSize;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    html {
+        font-size: (640/320)*$baseFontSize;
+    }
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table
+}
+
+.clearfix:after {
+    clear: both
+}
+
+.clearfix {
+    *zoom: 1
+}
+
+.clearboth {
+    clear: both;
+}
+
+.por {
+    position: relative;
+}
+
+.wrap {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.checkBrowser {
+    font-size: 14px;
+    line-height: 40px;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 50%;
+    width: 700px;
+    height: 40px;
+    margin-left: -360px;
+    padding: 0 10px;
+    color: #FFF;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #E6212A;
+    a {
+        font-size: 16px;
+        line-height: 20px;
+        position: absolute;
+        top: 10px;
+        right: 5px;
+        display: block;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        text-align: center;
+        color: #333;
+        border-radius: 50%;
+        background-color: #FFF;
+    }
+}
+
+@font-face {
+    font-family: "iconfont";
+    src: url('iconfont.eot?t=1507119728366');
+    /* IE9*/
+    src: url('iconfont.eot?t=1507119728366#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('data:application/x-font-woff;charset=utf-8;base64,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') format('woff'), url('iconfont.ttf?t=1507119728366') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('iconfont.svg?t=1507119728366#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-sinaweibo:before {
+    content: "\e603";
+}
+
+.icon-dianhua:before {
+    content: "\e644";
+}
+
+.icon-qq-copy:before {
+    content: "\e600";
+}
+
+.icon-wechat:before {
+    content: "\e63f";
+}
+
+.icon-didian:before {
+    content: "\e81c";
+}
+
+.icon-dagou:before {
+    content: "\e605";
+}
+
+.icon-jiantou:before {
+    content: "\e601";
+}
+
+.icon-lingxing:before {
+    content: "\e629";
+}
+
+.icon-sousuo:before {
+    content: "\e60a";
+}
+
+.icon-sanhengzongleimu:before {
+    content: "\e655";
+}
+
+.icon-tupian:before {
+    content: "\e60f";
+}
+
+
+/* reset.css V1.6  End */
+
+// page结构以及CSS样式
+// *******************
+// ********************
+// ********************
+// HTML结构
+// <div class="paged">
+//  <a href="#">首页</a>
+//  <a class="">上一页</a>
+//  <span class="current">1</span>
+//  <a href="#">2</a>
+//  <a class="" href="#">下一页</a>
+//  <a href="#">尾页</a>
+// </div>
+// ********************
+// ********************
+// ********************
+// CSS样式
+// .paged { padding-top: 30px; text-align: center; }
+// .paged a, .paged .p_info, .paged .current { display: inline-block; zoom: 1; *display:inline;
+// margin: 0px 3px; padding: 5px 10px; font-size: 12px; text-align: center; border: 1px solid #cfcfcf; background: #ffffff; color: #333; }
+// .paged .current, .paged a:hover { border: 1px solid #076da8; background: #147ab5; color: #fff; }

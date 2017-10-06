@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../lib/core.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../lib/core.js"></script>
+</head>
+
+<body>
+    <h1>通用导航结构</h1>
+    <div class="site-header">
+        <div class="wrap clearfix por">
+            <!--通常放置网站的logo  -->
+            <div class="header-logo">
+                <a href="" class="logo">
+                    <div class="holdplace">logo</div>
+                </a>
+            </div>
+            <!--网站的一级导航  -->
+            <div class="header-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="link" href="">首页</a>
+                        <!--二级导航  -->
+                        <ul class="sub-list">
+                            <li>
+                                <a href="">首页</a>
+                            </li>
+                            <li>
+                                <a href="">首页</a>
+                            </li>
+                            <li>
+                                <a href="">首页</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="link" href="">产品详情</a>
+                    </li>
+                </ul>
+            </div>
+            <!--导航的搜索  -->
+            <div class="header-search">
+                <form>
+                    <input type="text" class="search-text">
+                    <button type="submit" class="search-btn iconfont icon-sousuo"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--手机导航  -->
+    <div class="mo-site-hearder">
+        <a class="header-logo">
+            <img src="" alt="">
+        </a>
+        <div class="header-btn" id="J_mo-btn">
+            <span class="btn-line"></span>
+        </div>
+    </div>
+    <!--手机导航 展开  -->
+    <div class="iphone-nav" id="J_iphoneNav">
+        <div>
+            <!--一级导航列表  -->
+            <ul class="one-list">
+                <li class="li">
+                    <!--一级导航项目  -->
+                    <div class="one-item">
+                        <a href="">首页</a>
+                        <i>+</i>
+                    </div>
+                    <!--二级导航列表  -->
+                    <ul class="two-list">
+                        <li>
+                            <!--二级导航项目  -->
+                            <div class="two-item">
+                                <a href="">首页</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="two-item">
+                                <a href="">首页</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="two-item">
+                                <a href="">首页</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mo-iphone-mark"></div>
+    <script src="../js/index.js" charset="utf-8"></script>
+
+</body>
+
+</html>
