@@ -154,3 +154,33 @@ $one: (100%/24);
         display: block !important;
     }
 }
+
+.response-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media(min-width:1200px) {
+    .response-container {
+        max-width: 1140px;
+    }
+}
+
+@media(min-width:992px) {
+    .response-container {
+        max-width: 960px;
+    }
+}
+
+@media(min-width:768px) {
+    .response-container {
+        max-width: 720px;
+    }
+}
+
+@media(min-width:576px) {
+    .response-container {
+        max-width: 540px;
+    }
+}
