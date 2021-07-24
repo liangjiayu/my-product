@@ -1,0 +1,58 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+header {
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+}
+.btn {
+    display: inline-block;
+    color: #fff;
+    background-color: #9f8b77;
+    padding: 8px 18px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+header h1 {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+header p {
+    margin-top: 5px;
+    font-size: 24px;
+}
+.container {
+    margin: 0 auto;
+    width: 460px;
+    height: 460px;
+    border-radius: 10px;
+    background-color: #bbada0;
+    padding: 20px;
+    position: relative;
+    font-size: 0;
+    text-align: center;
+}
+.grid {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: #ccc0b3;
+}
+.grid:nth-child(4n) {
+    margin-right: 0;
+}
+.grid-num {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 40px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+}
